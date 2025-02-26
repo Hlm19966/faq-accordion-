@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+--White: hsl(0, 0%, 100%);
+--Light-pink: hsl(275, 100%, 97%);
+--Grayish-purple: hsl(292, 16%, 49%);
+--Dark-purple: hsl(292, 42%, 14%);
+}
+
+
+/*css rest*/
+
+*,*::before,  *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+/*end of css rest*/
+
+/*body */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    font-family: "Work Sans", serif;
+    font-size: 1rem;
+    background-color: var(--Light-pink);
+    position: relative;
+}
+
+.background-image {
+    background-image: url("assets/images/background-pattern-mobile.svg");
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 34vh;
+    z-index: -1;
+}
+
+
+/*container*/
+.container {
+    max-width: 23.438rem;
+    background-color: var(--White);
+    border-radius: 0.5rem;
+    padding: 14px 28px;
+}
+
+
+.title {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px; 
+    margin-bottom: 25px;
+}
+
+.purple-star {
+    width: 25px;
+    height: auto;
+}
+
+h1 {
+    color: var(--Dark-purple);
+    font-weight: 700;
+}
+
+.section {
+    display: flex;
+    justify-content: space-between;
+    gap: 38px;
+    margin-bottom: 20px;
+}
+
+.questions {
+    color: var(--Dark-purple);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.2;
+    margin-top: 6px;
+}
+
+.answer {
+    display: none;
+    color: var(--Dark-purple);
+    opacity: 0.54;
+    font-weight: 500;
+    font-size: 0.955rem;
+    margin-bottom: 10px;
+}
+
+hr {
+    color: var(--Light-pink);
+    opacity: 0.16;
+    margin: 17px 0;
+}
+
+@media only screen and (min-width:60rem) {
+
+    .background-image {
+        background-image: url("assets/images/background-pattern-desktop.svg");
+    }
+
+    .container {
+        max-width: 32rem;
+    }
+
+    h1 {
+        font-size: 2.65rem;
+    }
+
+    .purple-star {
+        width: 32px;
+    }
+
+    .questions {
+        font-size: 0.938rem;
+    }
+
+    .section {
+        font-size: 30px;
+    }
+
+    .answer {
+        font-size: 0.875rem;
+    }
+}
+
+
