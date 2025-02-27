@@ -7,5 +7,5 @@ plusIcon.forEach((icon,index) => {
         answers[index].classList.toggle("active");
         icon.classList.toggle("active");
 
-    })
-})
+    });
+});
